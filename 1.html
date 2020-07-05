@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+		function log(country,name,sever){
+			this.name=name;
+			this.sever=sever;
+			this.country=country;
+		}
+		log.prototype.name=null;
+		log.prototype.sever=null;
+		log.prototype.country=null;
+		log.prototype.url=function(){
+		return'https://ko.classic.warcraftlogs.com/character/'+this.country+'/'+this.sever+'/'+this.name;
+		}
+		var p=new log('kr','그랜드메스터','힐스브래드');
+		console.log(p.url())
+	</script>>
+
+</body>
+</html>
